@@ -3,6 +3,7 @@
         "browser": true,
         "es6": true
     },
+
     "extends": [
         "plugin:react/recommended",
         "airbnb",
@@ -24,30 +25,36 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint",
         "react-hooks",
+        "@typescript-eslint",
         "prettier"
-        
     ],
     "rules": {
-        "react/jsx-props-no-spreadingh": "off",
+        "no-use-before-define": "off",
+        "prettier/prettier": "error",
+        "react/jsx-one-expression-per-line": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "react/prop-types": "off",
+        "no-unused-expressions": "off",
+        "react/jsx-props-no-spreading": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+        "@typescript-eslint/camelcase": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx"]}],
         "import/prefer-default-export": "off",
-        "prettier/prettier": "error",
-        "settings": {
-            "import/resolver": {
-              "typescript": {}
-            }
-          },
+        "import/no-duplicates": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
             {
-              "ts": "never",
-              "tsx": "never"
+                "ts": "never",
+                "tsx": "never"
             }
-          ]
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
     }
 }
