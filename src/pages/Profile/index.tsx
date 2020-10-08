@@ -132,6 +132,7 @@ const Profile: React.FC = () => {
     },
     [addToast, updateUser],
   );
+
   return (
     <Container>
       <header>
@@ -151,10 +152,7 @@ const Profile: React.FC = () => {
           onSubmit={handleSubmit}
         >
           <AvatarInput>
-            <img
-              src="https://avatars2.githubusercontent.com/u/2254731?s=460&u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&v=4"
-              alt={user.name}
-            />
+            <img src={user.avatar_url} alt={user.name} />
             <label htmlFor="avatar">
               <input type="file" id="avatar" onChange={handleAvatarChange} />
               <FiCamera />
